@@ -8,6 +8,7 @@
 <body>
 
     <h1>Kalkulator Dodawania</h1>
+    <h1> Kalkulator odejmowanie- turek </h1>
 
     <form id="addForm">
         <label for="number1">Liczba 1:</label>
