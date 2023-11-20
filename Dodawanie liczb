@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h1>Kalkulator Dodawania</h1>
+
+    <form id="addForm">
+        <label for="number1">Liczba 1:</label>
+        <input type="text" id="number1" name="number1" required>
+
+        <label for="number2">Liczba 2:</label>
+        <input type="text" id="number2" name="number2" required>
+
+        <button type="button" onclick="calculateSum()">Dodaj</button>
+    </form>
+
+    <p>Wynik: <span id="result"></span></p>
+
+    <script>
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById("number1").value);
+            var num2 = parseFloat(document.getElementById("number2").value);
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                var sum = num1 + num2;
+                document.getElementById("result").textContent = sum;
+            } else {
+                alert("Wprowadź poprawne liczby!");
+            }
+        }
+    </script>
+
+</body>
+</html>
