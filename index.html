@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Strona z Bootstrap</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Dodaj link do Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
 
-    <h1>Hello, World!</h1>
-    <h1> Dzień Dobry, Świecie- Turek</h1>
-    <h1>Hello, World! - Szewczyk</h1>
-    
-<a href="index2.html">link text</a>
+    <div class="container mt-5 text-center">
+        <h1>Strona z WSB</h1>
+
+        <!-- Przycisk do rozwijania sekcji -->
+        <button class="btn btn-primary mt-3" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Linki do stron
+        </button>
+
+        <!-- Sekcja z rozwijanymi podstronami -->
+        <div class="collapse mt-3" id="collapseExample">
+            <div class="card card-body">
+                <a href="#">Podstrona 1</a>
+                <a href="#">Podstrona 2</a>
+                <a href="#">Podstrona 3</a>
+                <a href="#">Podstrona 4</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dodaj link do Bootstrap JavaScript (wymagane do działania komponentów takich jak Collapse) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
