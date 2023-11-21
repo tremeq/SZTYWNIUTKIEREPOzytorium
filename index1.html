@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Calculator</title>
 </head>
 <body>
 
-    <h1>Kalkulator Dodawania</h1>
+    <h1>Kalkulator Dodawania i Odejmowania</h1>
 
-    <form id="addForm">
-        <label for="number1">Liczba 1:</label>
-        <input type="text" id="number1" name="number1" required>
-
-        <label for="number2">Liczba 2:</label>
-        <input type="text" id="number2" name="number2" required>
-
-        <button type="button" onclick="calculateSum()">Dodaj</button>
-        <button type="button" onclick="calculate()">Odejmij</button>
-        
-    </form>
+    <form>
+        <div class="mb-3">
+          <label for="number1" class="form-label">Pierwsza liczba:</label>
+          <input type="number" class="form-control" id="number1">
+        <div class="mb-3">
+          <label for="number2" class="form-label">Druga liczba:</label>
+          <input type="number" class="form-control" id="number2">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="calculateSum()">Dodaj</button>
+        <button type="button" class="btn btn-primary" onclick="calculate()">Odejmij</button>
+      </form>
 
     <p>Wynik: <span id="result"></span></p>
 
