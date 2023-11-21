@@ -3,46 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index4.css">
-    <title>Losowy Div</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Losowy Tekst</title>
 </head>
 <body>
-    Wylosuj jeden z 10 tekstów: <input type="button" value="LOSUJ" onclick="calc()">
-    <form>
-    <div >We need to rent a room for our party. </div>
-    <div >Yeah, I think it's a good environment for learning English. </div>
-    <div >The wake behind the boat told of the past while the open sea for told life in the unknown future. </div>
-    <div >Eating eggs on Thursday for choir practice was recommended. </div>
-    <div >Today I dressed my unicorn in preparation for the race. </div>
-    <div >He learned the important lesson that a picnic at the beach on a windy day is a bad idea. </div>
-    <div >He learned the important lesson that a picnic at the beach on a windy day is a bad idea. </div>
-    <div >No matter how beautiful the sunset, it saddened her knowing she was one day older. </div>
-    <div >There are no heroes in a punk rock band. </div>
-    <div >The teens wondered what was kept in the red shed on the far edge of the school grounds. </div>
-    <div >She advised him to come back at once. </div>
-    </form>
-</body>
-<script>
-    function getRandomDiv() {
-    var divs = document.getElementsByTagName('div');
-    var randomIndex = Math.floor(Math.random() * divs.length);
-    return divs[randomIndex];
-}
-function showDiv(div) {
-    div.style.display = 'block';
-}
-
-function hideDiv(div) {
-    div.style.display = 'none';
-}
-var currentDiv = null;
-
-function calc() {
-    if (currentDiv) {
-        hideDiv(currentDiv);
-    }
-    currentDiv = getRandomDiv();
-    showDiv(currentDiv);
-}
-</script>
+    <div class="main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <p class="text-center" id="messages"></p>
+                <button type="button" class="btn btn-primary btn-block" id="myBtn">Losuj ciekawostę</button>
+            </div>
+        </div>
+    </div>
+</div>
+ </body>
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
+
