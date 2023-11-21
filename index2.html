@@ -14,27 +14,29 @@
    <div class="container">
         <div class="row justify-content-center">
             <div class="col-4">
-			   <div class="form-floating mb-3">
-  <input type="number" class="form-control" id="podstawa" placeholder="podaj podstawe">
-  <label for="podstawa">Podstawa</label> 
-</div>
-<div class="form-floating mb-3"> 
-  <input type="number" class="form-control" id="wysokosc" placeholder="podaj wyskokość">
-  <label for="wysokosc">Wysokość</label>
- 
-</div>
-<div class="form-floating mb-3">
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="podstawa" placeholder="podaj podstawe">
+                    <label for="podstawa">Podstawa</label> 
+                </div>
+                <div class="form-floating mb-3"> 
+                    <input type="number" class="form-control" id="wysokosc" placeholder="podaj wyskokość">
+                    <label for="wysokosc">Wysokość</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button" onclick="obliczPoleTrojkata()">Oblicz</button>
+                    </div><br>
+                    <p class="text-center" id="wynik"> </p>
+                </div>
 
- <div class="d-grid gap-2">
-  <button class="btn btn-primary" type="button" onclick="obliczPoleTrojkata()">Oblicz</button>
-</div><br>
-                <p class="text-center" id="wynik"> </p>
+                <!-- Dodany przycisk przekierowujący do index.html -->
+                <div class="text-center">
+                    <a href="index.html" class="btn btn-secondary">Przejdź do index.html</a>
+                </div>
                 
             </div>
         </div>
     </div>
-    <div class="row justify-content-center"
-<a href="index.html"><button class="btn btn-primary" type="button">Przejdź do strony głównej</button></a>
     <script>
         function obliczPoleTrojkata() {
             var podstawa = parseFloat(document.getElementById('podstawa').value);
@@ -45,10 +47,7 @@
             } else {
                 alert("Wprowadź poprawne liczby!");
             }
-
         }
     </script>
-
 </body>
 </html>
-
