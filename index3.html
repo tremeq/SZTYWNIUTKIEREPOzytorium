@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdź Wzrost</title>
+</head>
+
+<body>
+    <h1>Sprawdź Wzrost</h1>
+
+    <label for="wzrost">Podaj swój wzrost (w cm): </label>
+    <input type="number" id="wzrost" name="wzrost" required>
+    <button onclick="sprawdzWzrost()">Sprawdź</button>
+
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzWzrost() {
+            // Pobierz wprowadzony wzrost
+            const wzrost = parseFloat(document.getElementById('wzrost').value);
+
+            // Sprawdź zakres wzrostu i wyświetl odpowiedni komunikat
+            if (wzrost >= 0 && wzrost < 140) {
+                document.getElementById('wynik').innerText = "Jesteś karłem.";
+            } else if (wzrost >= 140 && wzrost <= 165) {
+                document.getElementById('wynik').innerText = "Jesteś niski.";
+            } else if (wzrost > 165) {
+                document.getElementById('wynik').innerText = "Jesteś normalnego wzrostu.";
+            } else {
+                document.getElementById('wynik').innerText = "Podaj poprawny wzrost.";
+            }
+        }
+    </script>
+</body>
+
+</html>
