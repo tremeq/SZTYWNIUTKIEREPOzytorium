@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index4.css">
+    <link rel="stylesheet" href="style.css">
     <title>Losowy Div</title>
 </head>
 <body>
-    Wylosuj jeden z 10 tekstów: <input type="button" value="LOSUJ" onclick="selectRandomDiv()">
+    Wylosuj jeden z 10 tekstów: <input type="button" value="LOSUJ" onclick="calc()">
     <form>
     <div >We need to rent a room for our party. </div>
     <div >Yeah, I think it's a good environment for learning English. </div>
@@ -23,11 +23,26 @@
     </form>
 </body>
 <script>
-    let div = document.querySelectorAll('div');
-    function selectRandomDiv(){
-        let randomIndex = Math.floor(Match.random() * div.lenght);
-        let selectedDiv = div[randomIndex];
-        selectedDiv.style.hidden = 'block';
+    function getRandomDiv() {
+    var divs = document.getElementsByTagName('div');
+    var randomIndex = Math.floor(Math.random() * divs.length);
+    return divs[randomIndex];
+}
+function showDiv(div) {
+    div.style.display = 'block';
+}
+
+function hideDiv(div) {
+    div.style.display = 'none';
+}
+var currentDiv = null;
+
+function calc() {
+    if (currentDiv) {
+        hideDiv(currentDiv);
     }
+    currentDiv = getRandomDiv();
+    showDiv(currentDiv);
+}
 </script>
 </html>
