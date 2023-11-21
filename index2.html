@@ -38,9 +38,13 @@
         function obliczPoleTrojkata() {
             var podstawa = parseFloat(document.getElementById('podstawa').value);
             var wysokosc = parseFloat(document.getElementById('wysokosc').value);
-            var pole = 0.5 * podstawa * wysokosc;
+            if (!isNaN(podstawa) && !isNaN(wysokosc) && podstawa!=0 && wysokosc !=0) {
+                var pole = 0.5 * podstawa * wysokosc;
+                document.getElementById("wynik").textContent = pole;
+            } else {
+                alert("Wprowadź poprawne liczby!");
+            }
 
-            document.getElementById('wynik').innerHTML = 'Pole trójkąta: ' + pole.toFixed(2);
         }
     </script>
 
