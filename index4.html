@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowy Div</title>
+</head>
+<body>
+    Wylosuj jeden z 10 tekstów: <input type="button" value="LOSUJ" onclick="selectRandomDiv()">
+    <div display="none">We need to rent a room for our party. </div>
+    <div display="none">Yeah, I think it's a good environment for learning English. </div>
+    <div display="none">The wake behind the boat told of the past while the open sea for told life in the unknown future. </div>
+    <div display="none">Eating eggs on Thursday for choir practice was recommended. </div>
+    <div display="none">Today I dressed my unicorn in preparation for the race. </div>
+    <div display="none">He learned the important lesson that a picnic at the beach on a windy day is a bad idea. </div>
+    <div display="none">He learned the important lesson that a picnic at the beach on a windy day is a bad idea. </div>
+    <div display="none">No matter how beautiful the sunset, it saddened her knowing she was one day older. </div>
+    <div display="none">There are no heroes in a punk rock band. </div>
+    <div display="none">The teens wondered what was kept in the red shed on the far edge of the school grounds. </div>
+    <div display="none">She advised him to come back at once. </div>
+</body>
+<script>
+    let div = document.querySelectorAll('div');
+    function selectRandomDiv(){
+        let randomIndex = Math.floor(Match.random() * div.lenght);
+        let selectedDiv = div[randomIndex];
+        selectedDiv.style.dispal = 'block';
+    }
+</script>
+</html>
