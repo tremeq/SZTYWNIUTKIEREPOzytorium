@@ -1,0 +1,72 @@
+body { /* Styl dla całego ciała dokumentu */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Określenie rodzaju czcionki */
+    margin: 0; /* Usunięcie domyślnego marginesu */
+    padding: 0; /* Usunięcie domyślnego wypełnienia */
+    background-color: #1c1c1e; /* Ustawienie koloru tła */
+    color: #ffffff; /* Ustawienie koloru tekstu */
+}
+.header { /* Styl dla nagłówka strony */
+    display: flex; /* Używanie elastycznego box modelu do układania elementów */
+    justify-content: center; /* Wycentrowanie elementów w poziomie */
+    align-items: center; /* Wycentrowanie elementów w pionie */
+    position: relative; /* Pozycjonowanie względem innych elementów */
+    background-color: #2c2c2e; /* Ustawienie koloru tła nagłówka */
+    padding: 20px; /* Ustawienie wewnętrznego wypełnienia */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dodanie cienia do nagłówka */
+}
+.title { /* Styl dla tytułu w nagłówku */
+    font-size: 24px; /* Ustawienie wielkości czcionki */
+    font-weight: bold; /* Ustawienie pogrubionej czcionki */
+}
+.clock { /* Styl dla zegara */
+    position: absolute; /* Absolutne pozycjonowanie względem rodzica */
+    right: 20px; /* Odstęp od prawej krawędzi rodzica */
+    font-size: 30px; /* Wielkość czcionki zegara */
+    background-color: #3a3a3c; /* Kolor tła zegara */
+    padding: 5px 10px; /* Wewnętrzne wypełnienie zegara */
+    border-radius: 15px; /* Zaokrąglenie rogów zegara */
+}
+@media (max-width: 600px) { /* Styl dla ekranów o szerokości maksymalnie 600px */
+    .title { /* Styl dla tytułu na mniejszych ekranach */
+        font-size: 18px; /* Mniejsza czcionka dla tytułu */
+    }
+    .clock { /* Styl dla zegara na mniejszych ekranach */
+        font-size: 14px; /* Mniejsza czcionka dla zegara */
+    }
+}
+
+
+
+/* Dodanie stylu dla tabelki z dniami tygodnia */
+.week-table {
+    border-collapse: separate;
+    margin: 50px; /* Dodałem margines dla lepszego wyglądu */
+}
+
+.week-table table {
+    width: 100%;
+    border-collapse: separate;
+    margin-top: 20px; /* Dodany margines dla odstępu od nagłówka */
+}
+
+.week-table th, .week-table td {
+    padding: 10px;
+    text-align: center;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+    border-radius: 10px; /* Zaokrąglenie rogów */
+}
+
+.week-table th {
+    background-color: #2c2c2e;
+}
+
+.week-table td {
+    background-color: #3a3a3c;
+}
+
+/* Dodanie przerwy między dniami tygodnia */
+.week-table td + td {
+    margin-left: 100px;
+}
+
