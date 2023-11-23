@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Tygodniowy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background: #141212b9;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between; /* Odległość między elementami po obu stronach */
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .time {
+            background: hsla(255, 7%, 11%, 0.555);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .srodek {
+            text-align: center;
+            margin: auto; /* Add margin: auto; to center the element horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="srodek">
+        <strong>Plan Tygodniowy</strong></div>
+        <div class="time" id="clock"></div>
+    </div>
+    <!-- Reszta zawartości strony tutaj -->
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+
+            // Aktualizacja co sekundę
+            setTimeout(updateTime, 1000);
+        }
+
+        // Inicjalizacja
+        updateTime();
+    </script>
+</body>
+</html>
 
