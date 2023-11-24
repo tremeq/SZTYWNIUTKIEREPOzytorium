@@ -1,72 +1,87 @@
-body { /* Styl dla całego ciała dokumentu */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Określenie rodzaju czcionki */
-    margin: 0; /* Usunięcie domyślnego marginesu */
-    padding: 0; /* Usunięcie domyślnego wypełnienia */
-    background-color: #1c1c1e; /* Ustawienie koloru tła */
-    color: #ffffff; /* Ustawienie koloru tekstu */
-}
-.header { /* Styl dla nagłówka strony */
-    display: flex; /* Używanie elastycznego box modelu do układania elementów */
-    justify-content: center; /* Wycentrowanie elementów w poziomie */
-    align-items: center; /* Wycentrowanie elementów w pionie */
-    position: relative; /* Pozycjonowanie względem innych elementów */
-    background-color: #2c2c2e; /* Ustawienie koloru tła nagłówka */
-    padding: 20px; /* Ustawienie wewnętrznego wypełnienia */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Dodanie cienia do nagłówka */
-}
-.title { /* Styl dla tytułu w nagłówku */
-    font-size: 24px; /* Ustawienie wielkości czcionki */
-    font-weight: bold; /* Ustawienie pogrubionej czcionki */
-}
-.clock { /* Styl dla zegara */
-    position: absolute; /* Absolutne pozycjonowanie względem rodzica */
-    right: 20px; /* Odstęp od prawej krawędzi rodzica */
-    font-size: 30px; /* Wielkość czcionki zegara */
-    background-color: #3a3a3c; /* Kolor tła zegara */
-    padding: 5px 10px; /* Wewnętrzne wypełnienie zegara */
-    border-radius: 15px; /* Zaokrąglenie rogów zegara */
-}
-@media (max-width: 600px) { /* Styl dla ekranów o szerokości maksymalnie 600px */
-    .title { /* Styl dla tytułu na mniejszych ekranach */
-        font-size: 18px; /* Mniejsza czcionka dla tytułu */
-    }
-    .clock { /* Styl dla zegara na mniejszych ekranach */
-        font-size: 14px; /* Mniejsza czcionka dla zegara */
-    }
-}
-
-
-
-/* Dodanie stylu dla tabelki z dniami tygodnia */
-.week-table {
-    border-collapse: separate;
-    margin: 50px; /* Dodałem margines dla lepszego wyglądu */
-}
-
-.week-table table {
-    width: 100%;
-    border-collapse: separate;
-    margin-top: 20px; /* Dodany margines dla odstępu od nagłówka */
-}
-
-.week-table th, .week-table td {
-    padding: 10px;
-    text-align: center;
-    border: 0px solid #ffffff;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1e;
     color: #ffffff;
-    border-radius: 10px; /* Zaokrąglenie rogów */
 }
 
-.week-table th {
+.container {
+    max-width: 1200px; /* Dodane ograniczenie szerokości kontenera */
+    margin: 0 auto; /* Wycentrowanie kontenera na stronie */
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background-color: #2c2c2e;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.week-table td {
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.clock {
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
     background-color: #3a3a3c;
+    padding: 5px 10px;
+    border-radius: 15px;
 }
 
-/* Dodanie przerwy między dniami tygodnia */
-.week-table td + td {
-    margin-left: 100px;
+@media (max-width: 600px) {
+    .title {
+        font-size: 18px;
+    }
+    .clock {
+        font-size: 14px;
+    }
 }
 
+#planLekcji {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.dzien {
+    background-color: #3a3a3c;
+    border: 1px solid #ffffff;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dzien:hover {
+    transform: scale(1.02);
+}
+
+.lekcje-container {
+    margin-top: 10px;
+
+}
+
+.lekcja {
+    margin-bottom: 20px;
+    background-color: #1c1c1e;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lekcja span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
